@@ -1,0 +1,122 @@
+:root {
+  --primary: #b7791f;
+  --accent: #a83b1d;
+  --bg: #f7f3ee;
+  --text: #3a2e27;
+  --price: #b45309;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  opacity: 0.85;
+}
+
+.menu-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/ảnh/nha-hang-nam-me-1-1200x800.png") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.menu-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55));
+}
+.menu-header-text {
+  position: relative;
+  z-index: 2;
+}
+.menu-header-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+.menu-header-text p {
+  font-size: 1.25rem;
+  color: #f5e8d9;
+  margin-top: 0.5rem;
+}
+
+.card {
+  border: none;
+  overflow: hidden;
+  background: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(58, 46, 39, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(58, 46, 39, 0.18);
+}
+.card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.4s ease;
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+.card-body {
+  padding: 1.25rem;
+}
+.card-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+.card-text {
+  color: #5a4b3e;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.price {
+  color: var(--price);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+section {
+  padding: 60px 0;
+}
+.container {
+  max-width: 1100px;
+}
+
+@media (max-width: 768px) {
+  .menu-header {
+    height: 45vh;
+  }
+  .menu-header-text h1 {
+    font-size: 2.2rem;
+  }
+  .menu-header-text p {
+    font-size: 1rem;
+  }
+}
